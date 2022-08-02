@@ -29,9 +29,9 @@ def predict():
     prediction = model.predict([[exp1,exp2,exp3,exp4,exp5,exp6]])
     print("Survived", prediction)
     if prediction==[1]:
-        prediction="Passenger Survived"
+        prediction="Passenger Survived ヽ(^o^)ノ"
     else:
-        prediction="Passenger did not Survived"
+        prediction="Passenger did not Survived (⌣́_⌣̀)"
     print(prediction)
     return prediction
 
