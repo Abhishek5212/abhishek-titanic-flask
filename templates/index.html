@@ -1,0 +1,72 @@
+%%writefile templates/index.html
+
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Titanic</title>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+<style><!DOCTYPE html>
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+#Gender{}
+</style>
+</head>
+<body>
+<div class = ""style = "background-color:red;">
+<div class = "clearfix">
+<div class="col-md-12">
+<center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+<center><p style="font-size:30px;color:white;margin-top:10px;">Department of Computer Engineering</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">Summer Internship 2022 on Machine learning and Data Science</p></center> 
+</div>
+<div class="login">
+<h2 >TITANIC 🗻💥🚢</h2>
+<h4>Developed by ABHISHEK KUMAR SINGH</h4>
+<!-- Main Input For Receiving Query to our ML -->
+<form action="{{ url_for('predict')}}"method="get">
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp1" name="exp1" step="any" min="1" max="3" placeholder="0" required="required">
+<label for="floatingInput">Pclass</label>
+</div>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp2" name="exp2" step="any" min="0" max="1" placeholder="0" required="required">
+<label for="floatingInput">Gender (0: Female, 1: Male)</label>
+</div>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp3" name="exp3" step="any" min="10" max="100" placeholder="0" required="required">
+<label for="floatingInput">Age</label>
+</div>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp4" name="exp4" step="any" min="0" max="5" placeholder="0" required="required">
+<label for="floatingInput">Sibsp(Siblings and Spouse count)</label>
+</div>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp5" name="exp5" step="any" min="0" max="6" placeholder="0" required="required">
+<label for="floatingInput">Parch (eg: 0-6)</label>
+</div>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="exp6" name="exp6" step="any" min="5" max="100" placeholder="0" required="required">
+<label for="floatingInput">Fare</label>
+</div>
+<br>
+<br>
+<button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+</form>
+<br>
+<br>
+{{ prediction_text }}
+<div class="col-md-12">
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Project-4 on analysis of TITANI Dataset</p></center> 
+</div>
+</div>
+</div>
+</body>
+</html>
